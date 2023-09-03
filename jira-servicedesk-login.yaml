@@ -1,10 +1,20 @@
 id: servicedesk-login-panel
+
 info:
-  name: Servicedesk Login Panel Detector
-  author: abd
-  severity: high
-  description: Searches for ServiceDesk login panels by trying to query the "/servicedesk/customer/user/login" endpoint
-  tags: servicedesk,confluence,jira,panel,login
+  name: Jira Page Login Panel - Detect
+  author: abd4fg
+  severity: High
+  description: Jira service-desk login panel detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0.0
+    cwe-id: CWE-200
+  metadata:
+    max-request: 2
+    verified: true
+    shodan-query: http.html:"na"
+  tags: tech,jira,panel
+  
 requests:
   - method: GET
     path:
