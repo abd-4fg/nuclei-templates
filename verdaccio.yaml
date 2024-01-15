@@ -32,11 +32,7 @@ http:
           - 'verdaccio.org/docs/en/installation'
           - '<title>Verdaccio</title>'
           - '"title":"Verdaccio"'
-
-      - type: word
-        words:
-          - '<title>Verdaccio</title>'
-
+          
       - type: status
         status:
           - 200
