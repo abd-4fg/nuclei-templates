@@ -22,8 +22,7 @@ http:
 
     stop-at-first-match: true
     host-redirects: true
-    max-redirects: 2
-    matchers-condition: and
+    matchers-condition: or
     matchers:
       - type: word
         part: body
@@ -33,6 +32,10 @@ http:
           - 'verdaccio.org/docs/en/installation'
           - '<title>Verdaccio</title>'
           - '"title":"Verdaccio"'
+
+      - type: word
+        words:
+          - '<title>Verdaccio</title>'
 
       - type: status
         status:
