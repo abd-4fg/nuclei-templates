@@ -1,47 +1,29 @@
 id: verdaccio
-
+ 
 info:
   name: Verdaccio Page Login Panel - Detect
   author: abd4fg
   severity: High
   description: verdaccio Page login panel detected.
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cwe-id: CWE-200
-  metadata:
-    max-request: 2
-    verified: true
-    shodan-query: http.html:"na"
   tags: tech,verdaccio,panel
-
-http:
+ 
+requests:
   - method: GET
     path:
       - '{{BaseURL}}'
-
+ 
     stop-at-first-match: true
     host-redirects: true
-    matchers-condition: or
+    max-redirects: 2
+    matchers-condition: and
     matchers:
       - type: word
         part: body
         words:
-          - 'To publish your first package just'
-          - 'No Package Published Yet'
-          - 'verdaccio.org/docs/en/installation'
+          - 'Verdaccio'
           - '<title>Verdaccio</title>'
           - '"title":"Verdaccio"'
-          
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        part: header
-        words:
-          - "X-Powered-By: verdaccio"
-
+ 
       - type: status
         status:
           - 200
