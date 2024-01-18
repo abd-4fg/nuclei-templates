@@ -1,4 +1,4 @@
-id: verdaccio-nginx-detect-test-for-npm-misconfig.yaml
+id: verdaccio-nginx-detect-test.yaml
  
 info:
   name: Verdaccio Page Login Panel - Detect
