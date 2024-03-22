@@ -1,0 +1,18 @@
+id: Nexus-Default-pass
+info:
+  name: testing-draft
+  author: pdteam
+  severity: critical
+
+http:
+  - method: POST
+    path:
+      - "{{BaseURL}}/service/rapture/session"
+    headers:
+      Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+      Content-Length: 43
+    body: 'username=YWRtaW4%3D&password=YWRtaW4xMjM%3D'
+    matchers:
+      - type: status
+        status:
+          - 204
