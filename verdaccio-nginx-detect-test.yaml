@@ -1,4 +1,4 @@
-id: verdaccio-nginx-detect-test.yaml
+id: verdaccio-nginx-detect-test
  
 info:
   name: Verdaccio Page Login Panel - Detect
